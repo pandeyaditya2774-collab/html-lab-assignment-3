@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Assignment-3</title>
+      <link rel="stylesheet" href="style2.css">
+      <style>
+        @keyframes colorShift {
+            0% { color: #dd0cf0; }
+            50% { color: #0452f9; }
+            100% { color: #dd0cf0; }
+        }
+        header h1 {animation: colorShift 6s infinite alternate;}
+        header {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0.5rem 1rem; 
+        }
+        header ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 1.5rem; 
+        }
+
+        #About > div {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        #Skills > div {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+
+        #Projects ul {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding-left: 0; 
+            list-style: none;
+        }
+
+        #Projects li, #Skills div > div {
+            transition: all 0.3s ease-in-out;
+        }
+
+        #Projects li:hover, #Skills div > div:hover {
+            transform: translateY(-0.3rem); 
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2); 
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            
+            #About > div {
+                flex-direction: row;
+                text-align: left;
+                align-items: flex-start;
+            }
+        
+            main {
+                max-width: 90rem;
+                margin: 0 auto;
+            }
+        
+            #Projects ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <a href="#main_content">Skip to main content</a>
+    <nav id="Top">
+        <header>
+            <h1 style= "color : #000000; font-size: 1.5rem ;">Aditya Kumar Pandey</h1>
+            <ul>
+                <li><a href='#About'>About</a> </li>
+                <li><a href='#Projects'>Projects</a></li>
+                <li><a href='#Contact'>Contact</a></li>
+            </ul>
+        </header>
+    </nav>
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hi, I'm a web development student. 
+        This is my personal portfolio website.
+    </p>
+    <main id="main_content">
+    
+      <section id="About">
+        <h2>About Me</h2>
+        <div>
+        
+            <div>
+                <p>I'm a 1st-sem B.Tech CSE student with a keen interest in machine learning, algorithms, and research.
+                    I enjoy exploring new technologies, solving challenging problems, and learning how to apply theoretical concepts to real-world projects.
+                    I'm enthusiastic about building projects that combine creativity and logic while continuously growing my skills in the tech world.
+                </p>
+            </div>
+
+            <div>
+                <img src="IMG_0368.jpg" height="200px" width="200px" title="Profile image" Alt="Profile"/>
+            </div>
+        </div>
+      </section>
+
+      <section id="Projects">
+        <h2> My Projects</h2>
+        <ul>
+            <li>Valor Forge : A portfolio management app designed for creators to showcase projects beautifully.</li>
+            <li>QueenCode : An open-source toolkit for modern front-end components with accessibility in mind.</li>
+            <li>RoyalByte : A developer blog platform focusing on clean UI and insightful tech content.</li>
+        </ul>
+      </section>
+
+      <section id="Skills">
+        <h2>Technical Skills</h2>
+        <div>
+            <div>HTML <span class="skill-level">Beginner</span></div>
+            <div>Python <span class="skill-level">Intermediate</span></div>
+            <div>Java <span class="skill-level">Beginner</span></div>
+        </div>
+      </section>
+      <section id="Contact">
+        <h2>Contact Me</h2>
+        <form align="center" method ="post" name="Enquiries" >
+            <label for="name">Enter your Name : </label>
+            <input type="text" id="name" required placeholder="Your name">
+            <br>
+            <label for="email">Enter your Email :</label>
+            <input type="email" id="email" placeholder="abc@gmail.com">
+            <br>
+            <label for="textarea">Message : </label>
+            <textarea id="textarea" rows="3" placeholder="Enter message"></textarea>
+            <br>
+            <label for="submit"></label>
+            <button type="submit">Send</button>
+            <br>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <hr>
+      <a href='#Top'>Back To Top</a>
+    </footer>
+</body>
+</html>
